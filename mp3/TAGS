@@ -1,0 +1,81 @@
+
+frame_pool.C,333
+FramePool* FramePool::kernel_mem_pool 4,49
+FramePool* FramePool::process_mem_pool 5,93
+FramePool::FramePool(7,140
+unsigned long FramePool::get_base_frame_no(36,885
+unsigned long FramePool::get_frame(41,966
+void FramePool::mark_inaccessible(71,1643
+bool FramePool::includes_frame(87,2071
+void FramePool::release_frame(94,2268
+
+frame_pool.H,516
+#define _FRAME_POOL_H_15,287
+class FramePool 39,1109
+    static FramePool* kernel_mem_pool;FramePool::kernel_mem_pool43,1142
+    static FramePool* process_mem_pool;FramePool::process_mem_pool44,1182
+    unsigned long base_frame_no;FramePool::base_frame_no46,1225
+    unsigned long nframes;FramePool::nframes47,1259
+    unsigned long info_frame_no;FramePool::info_frame_no48,1287
+    static const unsigned int FRAME_SIZE FramePool::FRAME_SIZE49,1321
+    unsigned int  *bitmap;FramePool::bitmap52,1382
+
+vm_pool.C,175
+VMPool::VMPool(6,91
+unsigned long VMPool::allocate(41,1236
+void VMPool::release(83,2492
+BOOLEAN VMPool::is_legitimate(122,4003
+unsigned long VMPool::free_region(130,4187
+
+vm_pool.H,709
+#define _VM_POOL_H_15,286
+class VMPool 41,1141
+    unsigned long base_address;VMPool::base_address44,1192
+    unsigned long size;VMPool::size45,1224
+    FramePool *frame_pool;VMPool::frame_pool46,1248
+    PageTable *page_table VMPool::page_table47,1275
+    unsigned long start_address;VMPool::start_address50,1385
+    unsigned possible_no_pages;VMPool::possible_no_pages51,1418
+      typedef struct VirtualRegionsVMPool::VirtualRegions53,1451
+          unsigned long s_address;VMPool::VirtualRegions::s_address55,1495
+          unsigned long size;VMPool::VirtualRegions::size56,1530
+      }vregions;VMPool::vregions57,1560
+    vregions * virtual_regions;VMPool::virtual_regions58,1577
+
+page_table.C,627
+PageTable     * PageTable::current_page_table;5,74
+unsigned int    PageTable::paging_enabled;6,122
+FramePool     * PageTable::kernel_mem_pool;7,166
+FramePool     * PageTable::process_mem_pool;8,211
+unsigned long   PageTable::shared_size;9,257
+VMPool * PageTable::virtual_memory_regions[PageTable::virtual_memory_regions11,300
+unsigned int PageTable::pool_count 12,348
+PageTable::PageTable(17,486
+void PageTable::init_paging(42,1351
+void PageTable::load(55,1735
+void PageTable::enable_paging(61,1866
+void PageTable::handle_fault(69,2092
+void PageTable::free_page(134,4327
+void PageTable::register_vmpool(141,4480
+
+page_table.H,976
+#define _page_table_H_14,250
+class PageTable 40,1117
+    static PageTable     * current_page_table;PageTable::current_page_table45,1213
+    static unsigned int    paging_enabled;PageTable::paging_enabled46,1313
+    static FramePool     * kernel_mem_pool;PageTable::kernel_mem_pool47,1417
+    static FramePool     * process_mem_pool;PageTable::process_mem_pool48,1504
+    static unsigned long   shared_size;PageTable::shared_size49,1592
+    static VMPool *virtual_memory_regions[PageTable::virtual_memory_regions51,1681
+    static unsigned int pool_count;PageTable::pool_count52,1730
+    unsigned long        * page_directory;PageTable::page_directory55,1778
+    static const unsigned int 	PAGE_SIZE PageTable::PAGE_SIZE57,1871
+    static const unsigned int 	ENTRIES_PER_PAGE PageTable::ENTRIES_PER_PAGE58,1957
+    static const unsigned long 	TABLE_MASK PageTable::TABLE_MASK59,2061
+    static const unsigned long 	DIR_MASK PageTable::DIR_MASK60,2171
+
+page_table.o,0
+
+vm_pool.o,0
+
+frame_pool.o,0

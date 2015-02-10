@@ -1,0 +1,46 @@
+[ebrowse-hs "ebrowse 5.0" " -x" () ()][ebrowse-ts [ebrowse-cs "PageTable" () 0"page_table.H" "class PageTable {" 1134"page_table.C" ]
+()([ebrowse-ms "current_page_table" () 0 () () 0 0  () "PageTable     * PageTable::current_page_table;" 120]
+[ebrowse-ms "kernel_mem_pool" () 0 () () 0 0  () "FramePool     * PageTable::kernel_mem_pool;" 209]
+[ebrowse-ms "page_directory" () 0 () "    unsigned long        * page_directory;" 1820 0  () () 0]
+[ebrowse-ms "paging_enabled" () 0 () () 0 0  () "unsigned int    PageTable::paging_enabled;" 164]
+[ebrowse-ms "pool_count" () 0 () () 0 0  () "unsigned int PageTable::pool_count = 0;" 387]
+[ebrowse-ms "process_mem_pool" () 0 () () 0 0  () "FramePool     * PageTable::process_mem_pool;" 255]
+[ebrowse-ms "shared_size" () 0 () () 0 0  () "unsigned long   PageTable::shared_size;" 296]
+[ebrowse-ms "virtual_memory_regions" () 0 () () 0 0  () "VMPool * PageTable::virtual_memory_regions[];" 345]
+)
+([ebrowse-ms "PageTable" () 0 () "    PageTable();" 2549 0  () "PageTable::PageTable(){" 508]
+[ebrowse-ms "enable_paging" () 0 () () 0 0  () "void PageTable::enable_paging()" 1590]
+[ebrowse-ms "free_page" () 0 () "    void free_page(unsigned" 3515 0  () "void PageTable::free_page(unsigned" 3937]
+[ebrowse-ms "handle_fault" () 0 () () 0 0  () "void PageTable::handle_fault(REGS" 1774]
+[ebrowse-ms "init_paging" () 0 () () 0 0  () "void PageTable::init_paging(FramePool" 1197]
+[ebrowse-ms "load" () 0 () "    void load()" 2957 0  () "void PageTable::load()" 1517]
+[ebrowse-ms "register_vmpool" () 0 () "    void register_vmpool(VMPool" 3629 0  () "void PageTable::register_vmpool(VMPool" 4094]
+)
+([ebrowse-ms "PAGE_SIZE" () 0 () "gned int 	PAGE_SIZE        = Machine::PAGE_SIZE;" 1940 0  () () 0]
+[ebrowse-ms "PT_ENTRIES_PER_PAGE" () 0 () "ENTRIES_PER_PAGE = Machine::PT_ENTRIES_PER_PAGE;" 2036 0  () () 0]
+[ebrowse-ms "TABLE_MASK" () 0 () "onst unsigned long 	DIR_MASK = TABLE_MASK << 10;" 2231 0  () () 0]
+[ebrowse-ms "current_page_table" () 0 () "    static PageTable     * current_page_table;" 1259 2  () () 0]
+[ebrowse-ms "kernel_mem_pool" () 0 () "    static FramePool     * kernel_mem_pool;" 1460 2  () () 0]
+[ebrowse-ms "paging_enabled" () 0 () "    static unsigned int    paging_enabled;" 1355 2  () () 0]
+[ebrowse-ms "pool_count" () 0 () "    static unsigned int pool_count;" 1765 2  () () 0]
+[ebrowse-ms "process_mem_pool" () 0 () "    static FramePool     * process_mem_pool;" 1548 2  () () 0]
+[ebrowse-ms "shared_size" () 0 () "    static unsigned long   shared_size;" 1631 2  () () 0]
+[ebrowse-ms "virtual_memory_regions" () 0 () "    static VMPool *virtual_memory_regions[10];" 1727 2  () () 0]
+)
+([ebrowse-ms "enable_paging" () 0 () "    static void enable_paging()" 3187 0  () () 0]
+[ebrowse-ms "handle_fault" () 0 () "    static void handle_fault(REGS" 3442 0  () () 0]
+[ebrowse-ms "init_paging" () 0 () "    static void init_paging(FramePool" 2321 0  () () 0]
+)
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "*Globals*" () 0() () 0"page_table.H" ]
+()()
+()
+()
+()
+([ebrowse-ms "_page_table_H_" () 512 () () 0 0  () "#define _page_table_H_" 273]
+)
+()
+()()
+]

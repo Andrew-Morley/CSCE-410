@@ -1,0 +1,117 @@
+% Created by Husain Alshehhi
+% 01302014
+% Homework template
+
+\documentclass[10pt]{article}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{algorithm2e}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[utf8]{inputenc}
+\usepackage{pdfpages}
+\usepackage{url}
+%\usepackage{pslatex}
+%\usepackage{inconsolata}
+
+% Global variables
+\newcommand{\name}{Husain Alshehhi}
+\newcommand{\course}{CSCE 411}
+\newcommand{\homeworkNumber}{Report}
+\newcommand{\duedate}{February 19, 2014}
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+% Theorem environments
+\theoremstyle{plain}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{proposition*}{Proposition}
+\newtheorem{proposition}{Proposition}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{corollary}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem*{remark*}{Remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{definition*}{Definition}
+\newtheorem{definition}{Definition}
+\newtheorem*{solution*}{Solution}
+\newtheorem{solution}{Solution}
+\newtheorem*{exercise*}{Exercise}
+\newtheorem{exercise}{Exercise}
+\newtheorem*{problem*}{Problem}
+\newtheorem{problem}{Problem}
+
+% The style of the page
+\geometry{letterpaper}
+\onehalfspacing
+%doublespacing
+\pagestyle{fancy}
+\lhead{\name \hfill \homeworkNumber}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Zp}{\mathbb Z^+}
+\newcommand{\Qp}{\mathbb Q^+}
+\newcommand{\Rp}{\mathbb R^+}
+
+\newcommand{\set}[1]{\{ #1 \}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\vect}[1]{\left\langle #1 \right\rangle}
+
+\lstset{
+  basicstyle=\footnotesize\ttfamily,	
+  breakatwhitespace=false,         		
+  breaklines=true,                 		
+  captionpos=b,
+  escapeinside={\%*}{*)},          		
+  extendedchars=true,
+  frame=single,
+  keepspaces=true,                 	
+  language=C,                 		
+  numbers=none,                    		
+  %numbersep=5pt,                   		
+  showspaces=false,                		
+  showstringspaces=false,          		
+  showtabs=false,                  		
+  stepnumber=2,                    		
+  tabsize=4,
+  caption=\texttt{\lstname},
+  title=\texttt{\lstname}
+}
+
+% Title
+\title{
+	\horrule{0.5pt}\\
+	\Large \course: \homeworkNumber\\
+    \normalsize \name \\
+    \normalsize \duedate \\
+    \horrule{0.5pt}\\
+}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+In \texttt{frame\_pool.C}, I tried to implement the \texttt{frame\_pool} class. First, I tried to keep track of the frames I have within that space in memory I have. If I am given 0 as an input for \texttt{\_info\_frame\_no}, I consider the starting frame. Then I clear all the frames.
+
+In \texttt{get\_frame}, I wasn't sure what to do. I am confident that I should look for a non-zero frame, but given that, I do not know what to return. I found some advice online, but it was non-understandable.
+
+In \texttt{page\_table.C}, I implemented \texttt{enable\_paging} and \texttt{load} fine, according to the website. But I am not sure how to implement the rest. I looked online for help and read several manuals, but still the implementation we use in class is very different that anything I read.
+
+\end{document}
